@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
     <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>AUX Form Challenge</title>
@@ -17,7 +18,8 @@
         </header>
 
 
-        <form id="form" role="form">
+        <form method="post" action="assets/php/validate.php" id="form" role="form" novalidate>
+            <div id="errors"></div>
 
             <div class="number one">1</div>
             <h3>First, name your portfolio</h3>
@@ -80,6 +82,11 @@
                 <span class="circle"></span>
 
                 <div id="sprite"></div>
+
+                <input type="radio" name="cardtype" value="americanexpress" id="r_amex"><label for="r_amex">American Express</label>
+                <input type="radio" name="cardtype" value="visa" id="r_visa"><label for="r_visa">Visa</label>
+                <input type="radio" name="cardtype" value="discover" id="r_disc"><label for="r_disc">Discover</label>
+                <input type="radio" name="cardtype" value="mastercard" id="r_mc"><label for="r_mc">Mastercard</label>
 
                 <div class="clear"></div>
 
