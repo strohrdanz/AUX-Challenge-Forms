@@ -1,0 +1,337 @@
+@import url(http://fonts.googleapis.com/css?family=Antic+Slab);
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+body {
+	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
+	background: #b3e3ff;
+	font-size: 12px;
+	color: #5e5e5e;
+}
+
+h1 {
+	font-size: 3em;
+	font-family: 'Antic Slab', serif;
+	font-weight: normal;
+	color: #f1fcff;
+	padding: 0 0 5px 0;
+}
+
+h2 {
+	color: #b4e3f6;
+	font-size: 12px;
+}
+
+h3 {
+	color: #234b61;
+	font-family: 'Antic Slab', serif;
+	font-weight: normal;
+	font-size: 1.7em;
+	margin: 30px 0 10px 0;
+	float: left;
+}
+
+p {
+	color: #a2a2a2;
+	margin: 0 0 0 40px;
+}
+
+a {
+	text-decoration: none;
+	color: #72d0ff;
+	float: right;
+	margin: 35px 0 0 0;
+	font-size:1.2em;
+}
+
+section {
+	background: #ffffff;
+	padding: 0 0 10px 0;
+	-webkit-border-radius: 5px; 
+  	-moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+#wrapper {
+	width: 600px;
+	margin: 30px auto;
+}
+
+header {
+	padding: 20px 40px;
+	-webkit-border-radius: 5px 5px 0 0; 
+  	-moz-border-radius: 5px 5px 0 0; 
+    border-radius: 5px 5px 0 0; 
+
+ /* fallback */
+  background-color: #125e77;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c8ea6), to(#125e77));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #3c8ea6, #125e77);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #3c8ea6, #125e77);
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #3c8ea6, #125e77);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #3c8ea6, #125e77);
+
+  border: 1px solid #146c86;
+}
+
+form {
+	width: 520px;
+	margin: 0 auto;
+	position: relative;
+}
+
+input {
+	height: 30px;
+	font-size: 14px;
+	margin: 0 0 10px 40px;
+	-webkit-border-radius: 5px; 
+  	-moz-border-radius: 5px; 
+    border-radius: 5px; 
+    border: none;
+    border-left: 1px solid #cbcbcb;
+    -webkit-box-shadow: inset 0 8px 3px -6px #cbcbcb;
+	-moz-box-shadow: inset 0 8px 3px -6px #cbcbcb;
+	box-shadow: inset 0 8px 3px -6px #cbcbcb;
+	float: left;
+}
+
+input[type=text],input[type=email],input[type=password] {
+	width: 440px;
+}
+
+input[type=submit] {
+	width: 200px;
+	font-family: 'Antic Slab', serif;
+	font-size: 1.5em;
+	height: 40px;
+	margin: 0 0 20px 155px;
+	color: white;
+	cursor: pointer;
+
+	 /* fallback */
+  background-color: #7d9b32;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#90a933), to(#7d9b32));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #90a933, #7d9b32);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #90a933, #7d9b32);
+  /* IE 10 */
+  background: -ms-linear-gradient(t op, #90a933, #7d9b32);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #90a933, #7d9b32);
+
+  border: 1px solid #7d9b32;
+}
+
+#link {
+	width:290px;
+	display: inline;
+	margin: 0 0 0 40px;
+}
+
+#sample {
+	position: absolute;
+	top: 174px;
+	right: 35px;
+	width: 152px;
+	height: 30px;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	background: #fafafa;
+	-webkit-border-radius: 0px 5px 5px 0; 
+  	-moz-border-radius: 0px 5px 5px 0; 
+    border-radius: 0px 5px 5px 0; 
+    -webkit-box-shadow: inset 0 8px 3px -6px #cbcbcb;
+	-moz-box-shadow: inset 0 8px 3px -6px #cbcbcb;
+	box-shadow: inset 0 8px 3px -6px #cbcbcb;
+	border-left: 1px solid #cbcbcb;
+}
+
+label {
+	display: block;
+	margin: 20px auto 5px auto;
+	width: 440px;
+}
+
+.check {
+	width: 30px;
+	height: 30px;
+	background: blue;
+	float: right;
+}
+
+#card {
+	width: 240px;
+	margin: 0 0 0 40px;
+	float: left;
+}
+
+#sprite {
+	width: 190px;
+	height: 32px;
+	margin: 0 0 0 10px;
+    float: left;
+    background-image:url(../images/sprite.png);
+   	background-position: 0px -122px;
+}
+
+#sprite2 {
+	width: 70px;
+	height: 32px;
+	margin: 0 0 0 10px;
+    float: left;
+    background-image:url(../images/sprite.png);
+    background-position: 0px -374px;
+}
+
+#sprite.allcards {
+	background-position: 0px -122px;
+}
+
+#sprite.visa {
+	background-position: 0px -206px;
+}
+
+#sprite.amex {
+	background-position: 0px -164px;
+}
+
+#sprite.mc {
+	background-position: 0px -290px;
+}
+
+#sprite.disc {
+	background-position: 0px -249px;
+}
+
+#sprite2.amex2 {
+	background-position: 0px -332px;
+}
+
+#lock {
+	width: 20px;
+	height: 20px;
+	margin: 20px 10px 0 0;
+    float: right;
+    background-image:url(../images/sprite.png);
+    background-position: -59px -498px;
+}
+
+#code {
+	width: 80px;
+	margin: 0 0 0 40px;
+	float: left;
+}
+
+.month {
+	margin: 0 5px 0 40px;
+}
+
+.offscreen {
+	margin: -9999px;
+	position: absolute;
+}
+
+select {
+   	overflow: hidden;
+   	border: 1px solid #cbcbcb;
+   	height: 30px;
+   	color: #5e5e5e;
+   	background: #ffffff;
+   	font-size: 14px;
+   	line-height: 30px;
+   	float: left;
+}
+
+.fields {
+	width: 520px;
+	background: #f3f5f5;
+	margin: 0px auto 30px auto;
+	padding: 10px 5px 20px 5px;
+  	-webkit-border-radius: 5px; 
+  	-moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+.number {
+	position: absolute;
+	-webkit-border-radius: 50%; 
+  	-moz-border-radius: 50%; 
+	border-radius: 50%;
+	width: 25px;
+	height: 25px; 
+	line-height: 25px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	background: #52a3d4;
+	border: 6px solid #ffffff;	
+}
+
+.one {
+	left: -60px;
+	top: 25px;
+}
+
+.two {
+	left: -60px;
+	top: 278px;
+}
+
+.three {
+	left: -60px;
+	top: 636px;
+}
+
+.error {
+	border: none;
+	background: #ffe3e3;
+}
+
+.valid {
+	background: #e0e6ce;
+}
+
+.circle {
+	width: 25px;
+	height: 25px;
+	float:left;
+	margin: 0 0 0 5px;
+}
+
+.nosuccess {
+	background: url(../images/sprite.png);
+	background-position: 0px -495px;
+	background-repeat: no-repeat;
+}
+
+.success {
+	background: url(../images/sprite.png);
+	background-position: -31px -495px;
+	background-repeat: no-repeat;
+}
+
+.help-block {
+	display: none;
+}
+
+/*#errors {
+	position: absolute;
+	left: -900px;
+}*/
