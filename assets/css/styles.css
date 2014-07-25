@@ -260,6 +260,7 @@ select {
 }
 
 .number {
+	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 	position: absolute;
 	-webkit-border-radius: 50%; 
   	-moz-border-radius: 50%; 
@@ -273,7 +274,7 @@ select {
 	color: white;
 	background: #52a3d4;
 	border: 6px solid #ffffff;
-	top: 0;
+	top: -6px;
 	left: -60px;
 }
 
