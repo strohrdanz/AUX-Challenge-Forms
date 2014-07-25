@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-if(!Modernizr.canvas) {
+if(Modernizr.canvas) {
 	$.getScript( "assets/js/lib/jquery.form-validator.min.js" ).done(function() {
 		$.validate({
 			errorMessagePosition: $("#errors"),
@@ -66,12 +66,6 @@ $("#card").keyup(function(){
 		$("#sprite2").removeClass("amex2");
 		$("input[type='radio']").prop("checked", false);
 	}
-});
-
-$("form").on("submit", function(){
-	alert('success!');
-	return false;
-
 });
 
 });

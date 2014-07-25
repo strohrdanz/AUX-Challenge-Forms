@@ -36,6 +36,7 @@ h3 {
 	font-size: 1.7em;
 	margin: 30px 0 10px 0;
 	float: left;
+	position: relative;
 }
 
 p {
@@ -134,8 +135,8 @@ input[type=radio] + label {
 
 #sample {
 	position: absolute;
-	top: 174px;
-	right: 35px;
+	top: 110px;
+	right: 45px;
 	width: 152px;
 	height: 30px;
 	font-size: 14px;
@@ -255,6 +256,7 @@ select {
   	-webkit-border-radius: 5px; 
   	-moz-border-radius: 5px; 
     border-radius: 5px; 
+    position: relative;
 }
 
 .number {
@@ -270,22 +272,9 @@ select {
 	text-align: center;
 	color: white;
 	background: #52a3d4;
-	border: 6px solid #ffffff;	
-}
-
-.one {
+	border: 6px solid #ffffff;
+	top: 0;
 	left: -60px;
-	top: 25px;
-}
-
-.two {
-	left: -60px;
-	top: 278px;
-}
-
-.three {
-	left: -60px;
-	top: 636px;
 }
 
 .error {
@@ -326,6 +315,14 @@ select {
 }
 
 #errors {
-	position: absolute;
-	left: -9999px;
+	background: #ffe3e3;
+	color: red;
+	margin: 20px 0 0 0;
+	-webkit-border-radius: 5px; 
+  	-moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+
+.form-error {
+	padding: 2px 0 2px 10px;
 }
