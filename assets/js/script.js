@@ -3,15 +3,12 @@ $(document).ready(function(){
 if(!Modernizr.canvas) {
 	$.getScript( "assets/js/lib/jquery.form-validator.min.js" ).done(function() {
 		$.validate({
-			validateOnBlur: false,
 			errorMessagePosition: $("#errors"),
 			onError : function() {
-			// alert('Validation failed');
 			$(".error:first").focus();
 			},
 			onSuccess : function() {
 				alert('The form is valid!');
-			return false; // Will stop the submission of the form
 			}
 		});
 	});

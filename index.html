@@ -16,7 +16,7 @@
         </header>
 
         <form method="post" action="assets/php/validate.php" id="form" role="form">
-            <div id="errors" aria-live="assertive" aria-relevant="additions"></div>
+            <div id="errors" aria-live="assertive" role="alert" aria-relevant="additions"></div>
 
             <div class="number one">1</div>
             <h3>First, name your portfolio</h3>
@@ -91,7 +91,7 @@
 
                 <label>Expiration date</label>
                 <label for="month" class="offscreen">Month</label>
-                <select id="month" class="month" name="month" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter the month of your credit card's expiration date.">
+                <select id="month" class="month" name="month" required aria-required="true" aria-invalid="false" role="listbox" data-validation="required"  data-validation-error-msg="Please enter the month of your credit card's expiration date.">
                     <option value="">Month</option>
                     <option value="01">January</option>
                     <option value="02">February</option>
@@ -108,7 +108,7 @@
                 </select>
                 
                 <label for="year" class="offscreen">Year</label>
-                <select id="year" name="year" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter the year of your credit card's expiration date.">
+                <select id="year" name="year" required aria-required="true" aria-invalid="false" role="listbox" data-validation="required"  data-validation-error-msg="Please enter the year of your credit card's expiration date.">
                     <option value="">Year</option>
                     <option value="01">2014</option>
                     <option value="02">2015</option>
@@ -116,7 +116,7 @@
                     <option value="04">2017</option>
                     <option value="05">2018</option>
                     <option value="06">2019</option>
-                    <option value="06">2020</option>
+                    <option value="07">2020</option>
                 </select>
                 <span class="circle"></span>
                 <div id="lock"></div>
