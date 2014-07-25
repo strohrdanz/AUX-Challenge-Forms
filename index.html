@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
     <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>AUX Form Challenge</title>
@@ -17,9 +16,8 @@
             <h2>50 projects, 500 images, 10 videos, domain binding, and technical support.</h2>
         </header>
 
-
         <form method="post" action="assets/php/validate.php" id="form" role="form" novalidate>
-            <div id="errors"></div>
+            <div id="errors" aria-live="assertive" aria-relevant="additions"></div>
 
             <div class="number one">1</div>
             <h3>First, name your portfolio</h3>
@@ -28,17 +26,14 @@
 
             <article class="fields">
 
-
                 <label for="title">Portfolio title</label>
                 <input id="title" name="title" type="text" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a portfolio title."><span class="circle"></span>
                 <label for="link">Portfolio address</label>
-                <input id="link" name="link" type="text" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a portfolio address."><span class="circle"></span>
+                <input id="link" name="link" type="text" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a portfolio address."><span class="circle right"></span>
 
                 <div id="sample">.sample.com</div>
 
-                            <div class="clear"></div>
-
-
+                <div class="clear"></div>
             </article>
 
             <div class="number two">2</div>
@@ -116,7 +111,6 @@
                     <option value="12">December</option>
                 </select>
                 
-
                 <label for="year" class="offscreen">Year</label>
                 <select id="year" name="year" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter the year of your credit card's expiration date.">
                     <option value="">Year</option>
@@ -137,7 +131,6 @@
 
         </form>
         <div class="clear"></div>
-
 
     </section>
 

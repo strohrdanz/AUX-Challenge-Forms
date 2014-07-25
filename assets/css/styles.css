@@ -69,21 +69,13 @@ header {
 	-webkit-border-radius: 5px 5px 0 0; 
   	-moz-border-radius: 5px 5px 0 0; 
     border-radius: 5px 5px 0 0; 
-
- /* fallback */
-  background-color: #125e77;
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c8ea6), to(#125e77));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #3c8ea6, #125e77);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #3c8ea6, #125e77);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #3c8ea6, #125e77);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #3c8ea6, #125e77);
-
-  border: 1px solid #146c86;
+    background-color: #125e77;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c8ea6), to(#125e77));
+    background: -webkit-linear-gradient(top, #3c8ea6, #125e77);
+    background: -moz-linear-gradient(top, #3c8ea6, #125e77);
+    background: -ms-linear-gradient(top, #3c8ea6, #125e77);
+    background: -o-linear-gradient(top, #3c8ea6, #125e77);
+    border: 1px solid #146c86;
 }
 
 form {
@@ -298,7 +290,7 @@ select {
 }
 
 .error {
-	border: none;
+	border: none !important;
 	background: #ffe3e3;
 }
 
@@ -311,6 +303,11 @@ select {
 	height: 25px;
 	float:left;
 	margin: 0 0 0 5px;
+}
+
+.right {
+	float: right;
+	margin: 0 10px 0 0;
 }
 
 .nosuccess {

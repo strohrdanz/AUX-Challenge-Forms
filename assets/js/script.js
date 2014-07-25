@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-if(!Modernizr.canvas) {
+if(Modernizr.canvas) {
 	$.getScript( "assets/js/lib/jquery.form-validator.min.js" ).done(function() {
 		$.validate({
+			validateOnBlur: false,
 			errorMessagePosition: $("#errors"),
 			onError : function() {
 			// alert('Validation failed');
