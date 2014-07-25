@@ -327,5 +327,5 @@ select {
 
 #errors {
 	position: absolute;
-	left: -900px;
+	left: -9999px;
 }

@@ -5,7 +5,7 @@ if(!Modernizr.canvas) {
 		$.validate({
 			errorMessagePosition: $("#errors"),
 			onError : function() {
-			$(".error:first").focus();
+			// $(".error:first").focus();
 			},
 			onSuccess : function() {
 				alert('The form is valid!');
@@ -66,6 +66,12 @@ $("#card").keyup(function(){
 		$("#sprite2").removeClass("amex2");
 		$("input[type='radio']").prop("checked", false);
 	}
+});
+
+$("form").on("submit", function(){
+	alert('success!');
+	return false;
+
 });
 
 });
