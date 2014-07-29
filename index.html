@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script type="text/javascript" src="assets/js/lib/modernizr.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>AUX Form Challenge</title>
 </head>
 <body>
@@ -15,112 +14,100 @@
             <h2>50 projects, 500 images, 10 videos, domain binding, and technical support.</h2>
         </header>
 
-        <form method="post" action="assets/php/validate.php" id="form" role="form">
-            <div id="errors" aria-live="assertive" role="alert" aria-relevant="additions"></div>
+        <form method="post" class="clearfix" action="assets/php/validate.php" id="form" role="form" novalidate>
+            <div id="errors" aria-live="assertive" aria-relevant="additions"></div>
 
             <h3><span class="number">1</span>First, name your portfolio</h3>
 
-            <div class="clear"></div>
 
-            <article class="fields">
+            <article class="fields clearfix">
 
                 <label for="title">Portfolio title</label>
-                <input id="title" name="title" type="text" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a portfolio title.">
+                <input id="title" name="title" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a portfolio title.">
                 <span class="circle"></span>
                 <label for="link">Portfolio address</label>
-                <input id="link" name="link" type="text" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a portfolio address.">
+                <input id="link" name="link" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a portfolio address.">
                 <span class="circle right"></span>
 
                 <div id="sample">.sample.com</div>
-
-                <div class="clear"></div>
             </article>
 
             <h3><span class="number">2</span>Now, enter your account details</h3>
 
-            <div class="clear"></div>
-
-            <article class="fields">
+            <article class="fields clearfix">
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter your name.">
+                <input id="name" name="name" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter your name.">
                 <span class="circle"></span>
 
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" required aria-required="true" aria-invalid="false" data-validation="email"  data-validation-error-msg="Please enter a valid email address.">
+                <input id="email" name="email" type="email" required aria-required="true" data-validation="email"  data-validation-error-msg="Please enter a valid email address.">
                 <span class="circle"></span>
                 <div class="clear"></div>
                 <p>NOTE: We will never share your email, promise.</p>
 
                 <label for="password">Password</label>
-                <input id="password" name="password" type="password" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a password.">
+                <input id="password" name="password" type="password" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a password.">
                 <span class="circle"></span>
-                <div class="clear"></div>
             </article>
 
-            <h3><span class="number">3</span>Finally, enter your payment information</h3>
+            <h3 class="clearfix"><span class="number">3</span>Finally, enter your payment information <a href="#" tabindex="-1">Use PayPal</a></h3>
 
-            <a href="#">Use PayPal</a>
+            
 
-            <div class="clear"></div>
-
-            <article class="fields">
+            <article class="fields clearfix">
                 <label for="card">Card number</label>
                 <input id="card" name="card" type="text" maxlength="16" required aria-required="true" data-validation="number"  data-validation-error-msg="Please enter a valid credit card number.">
                 <span class="circle"></span>
 
                 <div id="sprite"></div>
 
-                <input type="radio" name="cardtype" value="americanexpress" id="r_amex"><label for="r_amex">American Express</label>
-                <input type="radio" name="cardtype" value="visa" id="r_visa"><label for="r_visa">Visa</label>
-                <input type="radio" name="cardtype" value="discover" id="r_disc"><label for="r_disc">Discover</label>
-                <input type="radio" name="cardtype" value="mastercard" id="r_mc"><label for="r_mc">Mastercard</label>
+                <input type="radio" name="cardtype" value="americanexpress" id="r_amex" required><label for="r_amex">American Express</label>
+                <input type="radio" name="cardtype" value="visa" id="r_visa" required><label for="r_visa">Visa</label>
+                <input type="radio" name="cardtype" value="discover" id="r_disc" required><label for="r_disc">Discover</label>
+                <input type="radio" name="cardtype" value="mastercard" id="r_mc" required><label for="r_mc">Mastercard</label>
 
-                <div class="clear"></div>
 
                 <label for="code">Security code</label>
-                <input id="code" name="code" type="text" maxlength="3" required aria-required="true" aria-invalid="false" data-validation="required"  data-validation-error-msg="Please enter a valid security code.">
+                <input id="code" name="code" type="text" maxlength="3" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a valid security code.">
                 <span class="circle"></span>
                     
                 <div id="sprite2"></div>
-                <div class="clear"></div>
 
                 <label>Expiration date</label>
                 <label for="month" class="offscreen">Month</label>
-                <select id="month" class="month" name="month" required aria-required="true" aria-invalid="false" role="listbox" data-validation="required"  data-validation-error-msg="Please enter the month of your credit card's expiration date.">
+                <select id="month" name="month" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter the month of your credit card's expiration date.">
                     <option value="">Month</option>
-                    <option value="01" role="option">January</option>
-                    <option value="02" role="option">February</option>
-                    <option value="03" role="option">March</option>
-                    <option value="04" role="option">April</option>
-                    <option value="05" role="option">May</option>
-                    <option value="06" role="option">June</option>
-                    <option value="07" role="option">July</option>
-                    <option value="08" role="option">August</option>
-                    <option value="09" role="option">September</option>
-                    <option value="10" role="option">October</option>
-                    <option value="11" role="option">November</option>
-                    <option value="12" role="option">December</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
                 </select>
                 
                 <label for="year" class="offscreen">Year</label>
-                <select id="year" name="year" required aria-required="true" aria-invalid="false" role="listbox" data-validation="required"  data-validation-error-msg="Please enter the year of your credit card's expiration date.">
+                <select id="year" name="year" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter the year of your credit card's expiration date.">
                     <option value="">Year</option>
-                    <option value="01" role="option">2014</option>
-                    <option value="02" role="option">2015</option>
-                    <option value="03" role="option">2016</option>
-                    <option value="04" role="option">2017</option>
-                    <option value="05" role="option">2018</option>
-                    <option value="06" role="option">2019</option>
-                    <option value="07" role="option">2020</option>
+                    <option value="01">2014</option>
+                    <option value="02">2015</option>
+                    <option value="03">2016</option>
+                    <option value="04">2017</option>
+                    <option value="05">2018</option>
+                    <option value="06">2019</option>
+                    <option value="07">2020</option>
                 </select>
                 <span class="circle"></span>
                 <div id="lock"></div>
-                <div class="clear"></div>
             </article> 
 
             <input id="submit" type="submit" value="Create Your Portfolio">
         </form>
-        <div class="clear"></div>
     </section>
 
 <script type="text/javascript" src="assets/js/script.js"></script>

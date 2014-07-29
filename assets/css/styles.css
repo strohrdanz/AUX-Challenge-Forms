@@ -5,8 +5,13 @@
 	margin: 0;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .clear {
-	clear: both;
+	clear:both;
 }
 
 body {
@@ -35,7 +40,6 @@ h3 {
 	font-weight: normal;
 	font-size: 1.7em;
 	margin: 30px 0 10px 0;
-	float: left;
 	position: relative;
 }
 
@@ -44,12 +48,18 @@ p {
 	margin: 0 0 0 40px;
 }
 
-a {
+h3 a {
+	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 	text-decoration: none;
 	color: #72d0ff;
-	float: right;
-	margin: 35px 0 0 0;
-	font-size:1.2em;
+	display: inline-block;
+	margin: 5px 0 0 65px;
+	font-size:.65em;
+	font-weight: normal;
+}
+
+h3:nth-child(6) {
+	display: inline-block;
 }
 
 section {
@@ -123,8 +133,11 @@ input[type=submit] {
 
 input[type=radio] + label {
 	margin: 0 5px;
-	width: auto;
 	display: inline;
+}
+
+#r_amex {
+	margin: 10px 0 0 40px;
 }
 
 #link {
@@ -135,7 +148,7 @@ input[type=radio] + label {
 
 #sample {
 	position: absolute;
-	top: 110px;
+	top: 130px;
 	right: 45px;
 	width: 152px;
 	height: 30px;
@@ -153,8 +166,8 @@ input[type=radio] + label {
 }
 
 label {
-	display: block;
-	margin: 20px auto 5px auto;
+	display: inline-block;
+	margin: 20px 0 5px 40px;
 	width: 440px;
 }
 
@@ -206,7 +219,7 @@ label {
 }
 
 #sprite.disc {
-	background-position: 0px -249px;
+	background-position: 0px -248px;
 }
 
 #sprite2.amex2 {
@@ -228,7 +241,7 @@ label {
 	float: left;
 }
 
-.month {
+#month {
 	margin: 0 5px 0 40px;
 }
 
@@ -274,17 +287,12 @@ select {
 	color: white;
 	background: #52a3d4;
 	border: 6px solid #ffffff;
-	top: -6px;
+	top: -7px;
 	left: -60px;
 }
 
 .error {
 	border: none !important;
-	background: #ffe3e3;
-}
-
-.valid {
-	background: #e0e6ce;
 }
 
 .circle {
@@ -316,7 +324,6 @@ select {
 }
 
 #errors {
-	background: #ffe3e3;
 	color: red;
 	margin: 20px 0 0 0;
 	-webkit-border-radius: 5px; 
