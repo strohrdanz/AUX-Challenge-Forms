@@ -22,7 +22,6 @@ if(!Modernizr.input.required) {
         $.getScript( "assets/js/lib/jquery.form-validator.min.js" )
         .done(function() {
 			$.validate({
-				validateOnBlur: false,
 				errorMessagePosition: $("#errors"),
 				onSuccess : function() {
 					alert('The form is valid!');
@@ -49,10 +48,10 @@ var card = document.getElementById("card");
 var sprite = document.getElementById("sprite");
 var sprite2 = document.getElementById("sprite2");
 
-if (stylesheet !== "") {
+if (stylesheet.length == 1) {
 	for( i = 0; i < radios.length; i++ ) {
-        radios[i].style.display = 'none';
-        radios[i].nextSibling.style.display = 'none';
+    	radios[i].style.display = 'none';
+    	radios[i].nextSibling.style.display = 'none';
     }
 }
 
