@@ -7,36 +7,39 @@ if(!Modernizr.input.required) {
     script.type = 'text/javascript';
     document.getElementsByTagName("head")[0].appendChild(script);
 
-     var checkReady = function(callback) {
+    var checkReady = function(callback) {
         if (window.jQuery) {
             callback(jQuery);
         }
         else {
-            window.setTimeout(function() { checkReady(callback); }, 100);
+            window.setTimeout(function() { 
+            	checkReady(callback); 
+            }, 100);
         }
     };
 
     checkReady(function($) {
-        $.getScript( "assets/js/lib/jquery.form-validator.min.js" ).done(function() {
-		$.validate({
-			validateOnBlur: false,
-			errorMessagePosition: $("#errors"),
-			onSuccess : function() {
-				alert('The form is valid!');
-			}
-		});
+        $.getScript( "assets/js/lib/jquery.form-validator.min.js" )
+        .done(function() {
+			$.validate({
+				validateOnBlur: false,
+				errorMessagePosition: $("#errors"),
+				onSuccess : function() {
+					alert('The form is valid!');
+				}
+			});
 
-		$('input, select').on('validation', function(evt, isValid) {
-			var test = ((isValid ? 'VALID' : 'NOT VALID'));
-			if (test == "VALID") {      	
-				$(this).next(".circle").removeClass("nosuccess");
-				$(this).next(".circle").addClass("success");
-			} else if (test == "NOT VALID") {
-				$(this).next(".circle").removeClass("success");
-				$(this).next(".circle").addClass("nosuccess");
-			}
-		});	
-	});
+			$('input, select').on('validation', function(evt, isValid) {
+				var test = ((isValid ? 'VALID' : 'NOT VALID'));
+				if (test == "VALID") {      	
+					$(this).next(".circle").removeClass("nosuccess");
+					$(this).next(".circle").addClass("success");
+				} else if (test == "NOT VALID") {
+					$(this).next(".circle").removeClass("success");
+					$(this).next(".circle").addClass("nosuccess");
+				}
+			});	
+		});
 	});
 }
 
