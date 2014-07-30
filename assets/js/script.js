@@ -57,8 +57,7 @@ if (stylesheet.length == 1) {
 
 function cardcheck() {
 	var cardcheck = card.value;
-	console.log(cardcheck);
-
+	// visa
 	if(cardcheck.match(/^4/)) {
 		sprite.removeAttribute("class");
 		sprite.setAttribute("class","visa");
@@ -84,11 +83,11 @@ function cardcheck() {
 		sprite.removeAttribute("class");
 		sprite2.removeAttribute("class");
 		sprite2.setAttribute("class","allcards");
-    		for( i = 0; i < radios.length; i++ ) {
-	        	if(radios[i].checked) {
-	            radios[i].checked=false;
-	        }
-    }
+		for( i = 0; i < radios.length; i++ ) {
+        	if(radios[i].checked) {
+            	radios[i].checked=false;
+        	}
+		}
 	}
 }
 
