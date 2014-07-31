@@ -1,6 +1,6 @@
 (function(){
 
-if(!Modernizr.input.required) {
+if(Modernizr.input.required) {
 
 	var script = document.createElement("SCRIPT");
     script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
@@ -21,14 +21,8 @@ if(!Modernizr.input.required) {
     checkReady(function($) {
         $.getScript( "assets/js/lib/jquery.form-validator.min.js" )
         .done(function() {
-        	
-			var customErrorMessages = {
-				badInt : 'Please enter a valid credit card number.',
-				badEmail : 'Please enter a valid email address.',
-			};
 
 			$.validate({
-				language : customErrorMessages,
 				errorMessagePosition: $("#errors"),
 				onSuccess : function() {
 					alert('The form is valid!');
@@ -49,11 +43,11 @@ if(!Modernizr.input.required) {
 	});
 }
 
-var stylesheet = document.styleSheets;
-var radios = document.getElementsByName("cardtype");
-var card = document.getElementById("card");
-var sprite = document.getElementById("sprite");
-var sprite2 = document.getElementById("sprite2");
+var stylesheet = document.styleSheets,
+	radios = document.getElementsByName("cardtype"),
+	card = document.getElementById("card"),
+	sprite = document.getElementById("sprite"),
+	sprite2 = document.getElementById("sprite2");
 
 if (stylesheet.length == 1) {
 	for( i = 0; i < radios.length; i++ ) {
