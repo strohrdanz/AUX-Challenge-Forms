@@ -21,7 +21,14 @@ if(!Modernizr.input.required) {
     checkReady(function($) {
         $.getScript( "assets/js/lib/jquery.form-validator.min.js" )
         .done(function() {
+        	
+			var customErrorMessages = {
+				badInt : 'Please enter a valid credit card number.',
+				badEmail : 'Please enter a valid email address.',
+			};
+
 			$.validate({
+				language : customErrorMessages,
 				errorMessagePosition: $("#errors"),
 				onSuccess : function() {
 					alert('The form is valid!');
@@ -31,11 +38,11 @@ if(!Modernizr.input.required) {
 			$('input, select').on('validation', function(evt, isValid) {
 				var test = ((isValid ? 'VALID' : 'NOT VALID'));
 				if (test == "VALID") {      	
-					$(this).next(".circle").removeClass("nosuccess");
-					$(this).next(".circle").addClass("success");
+					$(this).nextAll(".circle:first").removeClass("nosuccess");
+					$(this).nextAll(".circle:first").addClass("success");
 				} else if (test == "NOT VALID") {
-					$(this).next(".circle").removeClass("success");
-					$(this).next(".circle").addClass("nosuccess");
+					$(this).nextAll(".circle:first").removeClass("success");
+					$(this).nextAll(".circle:first").addClass("nosuccess");
 				}
 			});	
 		});
@@ -56,24 +63,24 @@ if (stylesheet.length == 1) {
 }
 
 function cardcheck() {
-	var cardcheck = card.value;
+	var cardval = card.value;
 	// visa
-	if(cardcheck.match(/^4/)) {
+	if(cardval.match(/^4/)) {
 		sprite.removeAttribute("class");
 		sprite.setAttribute("class","visa");
 		document.getElementById("r_visa").checked=true;
 	// mastercard
-	} else if(cardcheck.match(/^5[1-5]/)) {
+	} else if(cardval.match(/^5[1-5]/)) {
 		sprite.removeAttribute("class");
 		sprite.setAttribute("class","mc");
 		document.getElementById("r_mc").checked=true;
 	// discover
-	} else if(cardcheck.match(/^6/)) {
+	} else if(cardval.match(/^6/)) {
 		sprite.removeAttribute("class");
 		sprite.setAttribute("class","disc");
 		document.getElementById("r_disc").checked=true;
 	// amex
-	} else if(cardcheck.match(/^3[4]|[7]/)) {
+	} else if(cardval.match(/^3[4]|[7]/)) {
 		sprite.removeAttribute("class");
 		sprite.setAttribute("class","amex");
 		sprite2.setAttribute("class","amex2");

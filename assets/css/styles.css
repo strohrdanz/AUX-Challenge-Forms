@@ -5,15 +5,6 @@
 	margin: 0;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.clear {
-	clear:both;
-}
-
 body {
 	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 	background: #b3e3ff;
@@ -108,7 +99,8 @@ input:not([type=radio]) {
     -webkit-box-shadow: inset 0 8px 3px -6px #cbcbcb;
 	-moz-box-shadow: inset 0 8px 3px -6px #cbcbcb;
 	box-shadow: inset 0 8px 3px -6px #cbcbcb;
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 }
 
 input[type=text],input[type=email],input[type=password] {
@@ -175,14 +167,15 @@ label {
 #card {
 	width: 240px;
 	margin: 0 0 0 40px;
-	float: left;
+	display: inline-block;
 }
 
 #sprite {
 	width: 190px;
 	height: 32px;
-	margin: 0 0 0 10px;
-    float: left;
+	margin: 0px 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
     background-image:url(../images/sprite.png);
    	background-position: 0px -122px;
 }
@@ -191,7 +184,7 @@ label {
 	width: 70px;
 	height: 32px;
 	margin: 0 0 0 10px;
-    float: left;
+    display: inline-block;
     background-image:url(../images/sprite.png);
     background-position: 0px -374px;
 }
@@ -232,7 +225,7 @@ label {
 #code {
 	width: 80px;
 	margin: 0 0 0 40px;
-	float: left;
+	display: inline-block;
 }
 
 #month {
@@ -245,14 +238,13 @@ label {
 }
 
 select {
-   	overflow: hidden;
    	border: 1px solid #cbcbcb;
    	height: 30px;
    	color: #5e5e5e;
    	background: #ffffff;
    	font-size: 14px;
    	line-height: 30px;
-   	float: left;
+   	display: inline-block;
 }
 
 .fields {
@@ -292,13 +284,14 @@ select {
 .circle {
 	width: 25px;
 	height: 25px;
-	float:left;
-	margin: 0 0 0 5px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 1px 0 0 5px;
 }
 
 .right {
 	float: right;
-	margin: 0 10px 0 0;
+	margin: 0 7px 0 0;
 }
 
 .nosuccess {
@@ -318,12 +311,14 @@ select {
 }
 
 #errors {
-	color: red;
+/*	color: red;
 	margin: 20px 0 0 0;
 	-webkit-border-radius: 5px; 
   	-moz-border-radius: 5px; 
     border-radius: 5px; 
-    min-height: 4px;
+    min-height: 4px;*/
+    position: absolute;
+    left: -9999px;
 }
 
 .form-error {

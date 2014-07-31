@@ -14,12 +14,12 @@
             <h2>50 projects, 500 images, 10 videos, domain binding, and technical support.</h2>
         </header>
 
-        <form method="post" class="clearfix" action="assets/php/validate.php" id="form">
+        <form method="post" action="assets/php/validate.php" id="form">
             <div id="errors" aria-live="assertive" aria-relevant="additions"></div>
 
             <h3><span class="number">1</span>First, name your portfolio</h3>
 
-            <article class="fields clearfix">
+            <article class="fields">
 
                 <label for="title">Portfolio title</label>
                 <input id="title" name="title" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a portfolio title.">
@@ -33,13 +33,13 @@
 
             <h3><span class="number">2</span>Now, enter your account details</h3>
 
-            <article class="fields clearfix">
+            <article class="fields">
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter your name.">
                 <span class="circle"></span>
 
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" required aria-required="true" data-validation="email"  data-validation-error-msg="Please enter a valid email address.">
+                <input id="email" name="email" type="email" required aria-required="true" data-validation="email">
                 <span class="circle"></span>
                 <p>NOTE: We will never share your email, promise.</p>
 
@@ -48,28 +48,27 @@
                 <span class="circle"></span>
             </article>
 
-            <h3 class="clearfix"><span class="number">3</span>Finally, enter your payment information <a href="#" tabindex="-1">Use PayPal</a></h3>
+            <h3><span class="number">3</span>Finally, enter your payment information <a href="#" tabindex="-1">Use PayPal</a></h3>
 
             
 
-            <article class="fields clearfix">
+            <article class="fields">
                 <label for="card">Card number</label>
-                <input id="card" name="card" type="text" maxlength="16" required aria-required="true" data-validation="number"  data-validation-error-msg="Please enter a valid credit card number.">
-                <span class="circle"></span>
-
+                <input id="card" name="card" type="text" minlength="10" maxlength="16" required aria-required="true" data-validation="number"   data-validation-error-msg="Please enter a credit card number.">
                 <div id="sprite"></div>
+
+                <span class="circle"></span>
 
                 <input type="radio" name="cardtype" value="americanexpress" id="r_amex" required><label for="r_amex">American Express</label>
                 <input type="radio" name="cardtype" value="visa" id="r_visa" required><label for="r_visa">Visa</label>
                 <input type="radio" name="cardtype" value="discover" id="r_disc" required><label for="r_disc">Discover</label>
                 <input type="radio" name="cardtype" value="mastercard" id="r_mc" required><label for="r_mc">Mastercard</label>
 
-
                 <label for="code">Security code</label>
-                <input id="code" name="code" type="text" maxlength="3" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a valid security code.">
-                <span class="circle"></span>
-                    
+                <input id="code" name="code" type="text" maxlength="3" required aria-required="true" data-validation="number" data-validation-error-msg="Please enter a valid security code.">
                 <div id="sprite2"></div>
+
+                <span class="circle"></span>
 
                 <label>Expiration date</label>
                 <label for="month" class="offscreen">Month</label>
