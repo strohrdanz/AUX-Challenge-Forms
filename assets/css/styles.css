@@ -313,8 +313,8 @@ select {
   	-moz-border-radius: 5px; 
     border-radius: 5px; 
     min-height: 4px;
-/*    position: absolute;
-    left: -9999px;*/
+    position: absolute;
+    left: -9999px;
 }
 
 .form-error {
