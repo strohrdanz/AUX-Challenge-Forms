@@ -15,6 +15,22 @@ if(!Modernizr.input.required) {
 					return false;
 				}
 			});
+
+			$('input').not('input[type="radio"]').not(".month").after('<span></span>');
+
+			$('input, select').on('validation', function(evt, isValid) {
+				var test = ((isValid ? 'VALID' : 'NOT VALID'));
+				if (test == "VALID") {
+					$(this).next('span').removeClass('nosuccess');
+					$(this).next('span').addClass('success');
+				} else if (test == "NOT VALID") {
+					$(this).next('span').removeClass('success');
+					$(this).next('span').addClass('nosuccess');
+					if ($(this).hasClass("month year")){
+						$(this).css("border","1px solid red");
+					}
+				}
+			});
 	    }
     }
   }

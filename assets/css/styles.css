@@ -77,6 +77,23 @@ input[type=text],input[type=email],input[type=password] {
 	width: 440px;
 }
 
+.success, .nosuccess {
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	vertical-align: top;
+	background: url('../images/sprite.png') no-repeat;
+	margin: 6px;
+}
+
+.success {
+	background-position:  -31px -499px;
+}
+
+.nosuccess {
+	background-position: -2px -499px;
+}
+
 input[type=submit] {
 	width: 200px;
 	font-family: 'Antic Slab', serif;
@@ -186,7 +203,7 @@ input[type=radio] {
 }
 
 .amex {
-	margin: 0 0 0 5px;
+	margin: 0 0 0 15px;
 	background-position: 0 -206px;
 }
 
@@ -223,6 +240,7 @@ input[type=radio] {
 	height: 32px;
 	margin: 0 0 0 10px;
     display: inline-block;
+    vertical-align: top;
     background-image:url(../images/sprite.png);
     background-position: 0px -374px;
     color: transparent;
@@ -283,7 +301,7 @@ select {
 	left: -60px;
 }
 
-.error {
+input:not([type=select]).error {
 	border: none !important;
 }
 
@@ -294,24 +312,6 @@ select {
 	vertical-align: top;
 	margin: 1px 0 0 5px;
 }
-
-.right {
-	float: right;
-	margin: 0 7px 0 0;
-}
-
-.nosuccess {
-	background: url(../images/sprite.png);
-	background-position: 0px -495px;
-	background-repeat: no-repeat;
-}
-
-.success {
-	background: url(../images/sprite.png);
-	background-position: -31px -495px;
-	background-repeat: no-repeat;
-}
-
 #errors {
 	color: red;
 	margin: 20px 0 0 0;
