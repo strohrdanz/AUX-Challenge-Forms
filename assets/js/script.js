@@ -1,6 +1,6 @@
 (function(){
 
-if(Modernizr.input.required) {
+if(!Modernizr.input.required) {
 	Modernizr.load([
   {
     load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', 'assets/js/lib/jquery.form-validator.min.js'],
