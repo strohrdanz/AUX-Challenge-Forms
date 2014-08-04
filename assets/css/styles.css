@@ -1,10 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Antic+Slab);
-
-* {
-	padding: 0;
-	margin: 0;
-}
-
 body {
 	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 	background: #b3e3ff;
@@ -18,11 +11,13 @@ h1 {
 	font-weight: normal;
 	color: #f1fcff;
 	padding: 0 0 5px 0;
+	margin: 0;
 }
 
 h2 {
 	color: #b4e3f6;
 	font-size: 12px;
+	margin: 0;
 }
 
 h3 {
@@ -32,33 +27,12 @@ h3 {
 	font-size: 1.7em;
 	margin: 30px 0 10px 0;
 	position: relative;
-}
-
-p {
-	color: #a2a2a2;
-	margin: 0 0 0 40px;
-	display: inline-block;
-}
-
-h3 a {
-	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
-	text-decoration: none;
-	color: #72d0ff;
-	display: inline-block;
-	margin: 5px 0 0 65px;
-	font-size:.65em;
-	font-weight: normal;
-}
-
-h3:nth-child(6) {
 	display: inline-block;
 }
 
 section {
 	background: #ffffff;
 	padding: 0 0 10px 0;
-	-webkit-border-radius: 5px; 
-  	-moz-border-radius: 5px; 
     border-radius: 5px; 
 }
 
@@ -69,8 +43,6 @@ section {
 
 header {
 	padding: 20px 40px;
-	-webkit-border-radius: 5px 5px 0 0; 
-  	-moz-border-radius: 5px 5px 0 0; 
     border-radius: 5px 5px 0 0; 
     background-color: #125e77;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c8ea6), to(#125e77));
@@ -91,8 +63,6 @@ input:not([type=radio]) {
 	height: 30px;
 	font-size: 14px;
 	margin: 0 0 10px 40px;
-	-webkit-border-radius: 5px; 
-  	-moz-border-radius: 5px; 
     border-radius: 5px; 
     border: none;
     border-left: 1px solid #cbcbcb;
@@ -124,33 +94,22 @@ input[type=submit] {
 	border: 1px solid #7d9b32;
 }
 
-input[type=radio] + label {
-	margin: 0 5px;
-	display: inline;
-}
-
-#r_amex {
-	margin: 10px 0 0 40px;
-}
-
-#link {
+.link {
 	width:290px;
-	display: inline;
-	margin: 0 0 0 40px;
+	display: inline-block;
+	margin: 0 0 10px 40px;
 }
 
-#sample {
+.sample {
 	position: absolute;
-	top: 130px;
-	right: 45px;
+	top: 113px;
+	right: 42px;
 	width: 152px;
-	height: 30px;
+	height: 31px;
 	font-size: 14px;
 	line-height: 30px;
 	text-align: center;
 	background: #fafafa;
-	-webkit-border-radius: 0px 5px 5px 0; 
-  	-moz-border-radius: 0px 5px 5px 0; 
     border-radius: 0px 5px 5px 0; 
     -webkit-box-shadow: inset 0 8px 3px -6px #cbcbcb;
 	-moz-box-shadow: inset 0 8px 3px -6px #cbcbcb;
@@ -164,71 +123,131 @@ label {
 	width: 440px;
 }
 
+.note {
+	color: #a2a2a2;
+	margin: 0 0 0 40px;
+	display: inline-block;
+}
+
+legend {
+	position: relative;
+}
+
+fieldset {
+	border: none;
+	width: 520px;
+	background: #f3f5f5;
+	margin: 0px auto 30px auto;
+	padding: 10px 5px 20px 5px;
+    border-radius: 5px; 
+    position: relative;
+}
+
+fieldset.exp {
+	margin: 25px 0 0 0;
+	padding: 0;
+}
+
+.explabel {
+	display: block;
+	margin: 20px 0 5px 40px;
+	width: 440px;
+}
+
+legend a {
+	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
+	text-decoration: none;
+	color: #72d0ff;
+	display: inline-block;
+	margin: 5px 0 0 65px;
+	font-weight: normal;
+}
+
 #card {
 	width: 240px;
 	margin: 0 0 0 40px;
 	display: inline-block;
 }
 
-#sprite {
-	width: 190px;
+.sprite {
+	width: 45px;
 	height: 32px;
-	margin: 0px 0 0 10px;
-    display: inline-block;
-    vertical-align: top;
-    background-image:url(../images/sprite.png);
-   	background-position: 0px -122px;
+	display: inline-block;
+	background: url('../images/sprite.png');
+	margin: 0;
+	cursor: pointer;
+	color: transparent;
+	overflow: hidden;
 }
 
-#sprite2 {
+input[type=radio] {
+	position: absolute;
+	left: -9999px;
+}
+
+.amex {
+	margin: 0 0 0 5px;
+	background-position: 0 -206px;
+}
+
+.visa {
+	background-position: -48px -164px;
+}
+
+.disc {
+	background-position: -96px -164px;
+}
+
+.mc {
+	background-position: -144px -164px;
+}
+
+#r_amex:checked+label {
+	background-position: 0 -164px;
+}
+
+#r_visa:checked+label {
+	background-position: -48px -122px;
+}
+
+#r_disc:checked+label {
+	background-position: -96px -122px;
+}
+
+#r_mc:checked+label {
+	background-position: -144px -122px;
+}
+
+.cvv {
 	width: 70px;
 	height: 32px;
 	margin: 0 0 0 10px;
     display: inline-block;
     background-image:url(../images/sprite.png);
     background-position: 0px -374px;
+    color: transparent;
 }
 
-#sprite.allcards {
-	background-position: 0px -122px;
+#r_amex:checked ~ label.cvv {
+    background-position: 0 -332px;
 }
 
-#sprite.visa {
-	background-position: 0px -206px;
-}
-
-#sprite.amex {
-	background-position: 0px -164px;
-}
-
-#sprite.mc {
-	background-position: 0px -290px;
-}
-
-#sprite.disc {
-	background-position: 0px -248px;
-}
-
-#sprite2.amex2 {
-	background-position: 0px -332px;
-}
-
-#lock {
+.lock {
 	width: 20px;
 	height: 20px;
-	margin: 20px 10px 0 0;
+	margin: 0px 10px 0 0;
     float: right;
     background-image:url(../images/sprite.png);
     background-position: -59px -498px;
 }
 
-#code {
+input.code {
 	width: 80px;
 	margin: 0 0 0 40px;
 	display: inline-block;
 }
 
-#month {
+.month {
 	margin: 0 5px 0 40px;
 }
 
@@ -247,22 +266,9 @@ select {
    	display: inline-block;
 }
 
-.fields {
-	width: 520px;
-	background: #f3f5f5;
-	margin: 0px auto 30px auto;
-	padding: 10px 5px 20px 5px;
-  	-webkit-border-radius: 5px; 
-  	-moz-border-radius: 5px; 
-    border-radius: 5px; 
-    position: relative;
-}
-
 .number {
 	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 	position: absolute;
-	-webkit-border-radius: 50%; 
-  	-moz-border-radius: 50%; 
 	border-radius: 50%;
 	width: 25px;
 	height: 25px; 
@@ -273,7 +279,7 @@ select {
 	color: white;
 	background: #52a3d4;
 	border: 6px solid #ffffff;
-	top: -7px;
+	top: 23px;
 	left: -60px;
 }
 
@@ -309,12 +315,10 @@ select {
 #errors {
 	color: red;
 	margin: 20px 0 0 0;
-	-webkit-border-radius: 5px; 
-  	-moz-border-radius: 5px; 
     border-radius: 5px; 
     min-height: 4px;
-    position: absolute;
-    left: -9999px;
+/*    position: absolute;
+    left: -9999px;*/
 }
 
 .form-error {

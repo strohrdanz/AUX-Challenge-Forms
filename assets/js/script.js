@@ -1,89 +1,47 @@
 (function(){
 
-if(!Modernizr.input.required) {
-
-	var script = document.createElement("SCRIPT");
-    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
-    script.type = 'text/javascript';
-    document.getElementsByTagName("head")[0].appendChild(script);
-
-    var checkReady = function(callback) {
-        if (window.jQuery) {
-            callback(jQuery);
-        }
-        else {
-            window.setTimeout(function() { 
-            	checkReady(callback); 
-            }, 100);
-        }
-    };
-
-    checkReady(function($) {
-        $.getScript( "assets/js/lib/jquery.form-validator.min.js" )
-        .done(function() {
-
-			$.validate({
+if(Modernizr.input.required) {
+	Modernizr.load([
+  {
+    load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', 'assets/js/lib/jquery.form-validator.min.js'],
+        complete: function () {
+    	if (!window.jQuery) {
+            Modernizr.load('assets/js/lib/jquery-2.1.1.min.js');
+    	} else {
+		   	$.validate({
 				errorMessagePosition: $("#errors"),
 				onSuccess : function() {
 					alert('The form is valid!');
+					return false;
 				}
 			});
-
-			$('input, select').on('validation', function(evt, isValid) {
-				var test = ((isValid ? 'VALID' : 'NOT VALID'));
-				if (test == "VALID") {      	
-					$(this).nextAll(".circle:first").removeClass("nosuccess");
-					$(this).nextAll(".circle:first").addClass("success");
-				} else if (test == "NOT VALID") {
-					$(this).nextAll(".circle:first").removeClass("success");
-					$(this).nextAll(".circle:first").addClass("nosuccess");
-				}
-			});	
-		});
-	});
+	    }
+    }
+  }
+]);
 }
 
 var stylesheet = document.styleSheets,
 	radios = document.getElementsByName("cardtype"),
-	card = document.getElementById("card"),
-	sprite = document.getElementById("sprite"),
-	sprite2 = document.getElementById("sprite2");
-
-if (stylesheet.length == 1) {
-	for( i = 0; i < radios.length; i++ ) {
-    	radios[i].style.display = 'none';
-    	radios[i].nextSibling.style.display = 'none';
-    }
-}
+	card = document.getElementById("card");
 
 function cardcheck() {
 	var cardval = card.value;
 	// visa
 	if(cardval.match(/^4/)) {
-		sprite.removeAttribute("class");
-		sprite.setAttribute("class","visa");
 		document.getElementById("r_visa").checked=true;
 	// mastercard
 	} else if(cardval.match(/^5[1-5]/)) {
-		sprite.removeAttribute("class");
-		sprite.setAttribute("class","mc");
 		document.getElementById("r_mc").checked=true;
 	// discover
 	} else if(cardval.match(/^6/)) {
-		sprite.removeAttribute("class");
-		sprite.setAttribute("class","disc");
 		document.getElementById("r_disc").checked=true;
 	// amex
 	} else if(cardval.match(/^3[4]|[7]/)) {
-		sprite.removeAttribute("class");
-		sprite.setAttribute("class","amex");
-		sprite2.setAttribute("class","amex2");
 		document.getElementById("r_amex").checked=true;
 	} else {
 	// all cards 
-		sprite.removeAttribute("class");
-		sprite2.removeAttribute("class");
-		sprite2.setAttribute("class","allcards");
+		document.getElementsByName("cardtype").checked=false;
 		for( i = 0; i < radios.length; i++ ) {
         	if(radios[i].checked) {
             	radios[i].checked=false;
