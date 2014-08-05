@@ -18,9 +18,9 @@
         <form method="post" action="assets/php/validate.php" id="form">
             <div id="errors" aria-live="assertive" aria-relevant="additions"></div>
 
-            <legend><span class="number">1</span><h3>First, name your portfolio</h3></legend>
-
             <fieldset>
+                <legend><span class="number">1</span><h3>First, name your portfolio</h3></legend>
+
                 <label for="title">Portfolio title</label>
                 <input id="title" name="title" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a portfolio title.">
                 <label for="link">Portfolio address</label>
@@ -28,10 +28,10 @@
 
                 <label class="sample" for="link">.sample.com</label>
             </fieldset>
-
-            <legend><span class="number">2</span><h3>Now, enter your account details</h3></legend>
-
+            
             <fieldset>
+                <legend><span class="number">2</span><h3>Now, enter your account details</h3></legend>
+
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter your name.">
 
@@ -43,9 +43,9 @@
                 <input id="password" name="password" type="password" required aria-required="true" data-validation="required"  data-validation-error-msg="Please enter a password.">
             </fieldset>
 
-            <legend><span class="number">3</span><h3>Finally, enter your payment information</h3><a href="#" tabindex="-1">Use PayPal</a></legend>
-
             <fieldset>
+                <legend><span class="number">3</span><h3>Finally, enter your payment information</h3><a href="#" tabindex="-1">Use PayPal</a></legend>
+
                 <label for="card">Card number</label>
                 <input id="card" name="card" type="text" minlength="10" maxlength="16" required aria-required="true" data-validation="number" data-validation-error-msg="Please enter a credit card number.">
 
