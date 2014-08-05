@@ -1,9 +1,9 @@
-(function(){
+	(function(){
 
 if(!Modernizr.input.required) {
 	Modernizr.load([
   {
-    load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', 'assets/js/lib/jquery.form-validator.min.js'],
+    load: ['http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', 'assets/js/lib/jquery.form-validator.min.js'],
         complete: function () {
     	if (!window.jQuery) {
             Modernizr.load('assets/js/lib/jquery-2.1.1.min.js');

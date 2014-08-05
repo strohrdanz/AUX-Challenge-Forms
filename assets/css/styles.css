@@ -165,12 +165,6 @@ fieldset.exp {
 	padding: 0;
 }
 
-.explabel {
-	display: block;
-	margin: 20px 0 5px 40px;
-	width: 440px;
-}
-
 legend a {
 	font-family: "Lucida Grande", Arial, Verdana, sans-serif;
 	text-decoration: none;
@@ -257,6 +251,7 @@ input[type=radio] {
     float: right;
     background-image:url(../images/sprite.png);
     background-position: -59px -498px;
+    color: transparent;
 }
 
 input.code {
