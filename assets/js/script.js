@@ -20,10 +20,10 @@ if(!Modernizr.input.required) {
 
 			$('input, select').on('validation', function(evt, isValid) {
 				var test = ((isValid ? 'VALID' : 'NOT VALID'));
-				if (test == "VALID") {
+				if (test === "VALID") {
 					$(this).next('span').removeClass('nosuccess');
 					$(this).next('span').addClass('success');
-				} else if (test == "NOT VALID") {
+				} else if (test === "NOT VALID") {
 					$(this).next('span').removeClass('success');
 					$(this).next('span').addClass('nosuccess');
 					if ($(this).hasClass("month year")){

@@ -308,7 +308,7 @@ input.code {
 	background: #52a3d4;
 	border: 6px solid #ffffff;
 	top: 23px;
-	left: -60px;
+	left: -63px;
 }
 
 input:not([type=select]).error {
