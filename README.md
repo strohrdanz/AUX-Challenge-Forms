@@ -6,7 +6,7 @@ Form validation
 The Official Assignment
 -----------------------
 
-Resources
+<strong>Resources</strong>
 GIT help: http://www.csskarma.com/cheat/git/
 
 Font Stack: Lucida Grande, Arial, Verdana, sans-serif
@@ -17,7 +17,7 @@ Modernizr: http://modernizr.com/
 
 jQuery validation: http://bassistance.de/jquery-plugins/jquery-plugin-validation/
 
-Guidelines
+<strong>Guidelines</strong>
 Fork or clone the GIT rep
 Build out the designed form that's in /design/form-challenge.png
 Allowed libraries/plugins:
