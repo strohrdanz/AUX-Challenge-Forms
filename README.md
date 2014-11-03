@@ -6,25 +6,26 @@ Form validation
 The Official Assignment
 -----------------------
 
-<strong>Resources</strong>
-GIT help: http://www.csskarma.com/cheat/git/
+# Resources
 
-Font Stack: Lucida Grande, Arial, Verdana, sans-serif
+**GIT help**: http://www.csskarma.com/cheat/git/
 
-Web Font: http://www.google.com/webfonts#UsePlace:use/Collection:Antic+Slab
+**Font Stack**: Lucida Grande, Arial, Verdana, sans-serif
 
-Modernizr: http://modernizr.com/
+**Web Font**: http://www.google.com/webfonts#UsePlace:use/Collection:Antic+Slab
 
-jQuery validation: http://bassistance.de/jquery-plugins/jquery-plugin-validation/
+**Modernizr**: http://modernizr.com/
 
-<strong>Guidelines</strong>
-Fork or clone the GIT rep
-Build out the designed form that's in /design/form-challenge.png
-Allowed libraries/plugins:
-Modernizr
-jQuery
-jQuery Validation (or any JS validation plugin)
-Make sure you're not loading in resources you don't need
-Use HTML 5 validation that fallsback to JS validation, which falls back to PHP validation (you don't have to build the PHP validation)
-Make sure the form is naturally keyboard accessible
-Use semantic HTML
+**jQuery validation**: http://bassistance.de/jquery-plugins/jquery-plugin-validation/
+
+# Guidelines
+- Fork or clone the GIT rep
+- Build out the designed form that's in /design/form-challenge.png
+- Allowed libraries/plugins:
+	- Modernizr
+	- jQuery
+	- jQuery Validation (or any JS validation plugin)
+- Make sure you're not loading in resources you don't need
+- Use HTML 5 validation that fallsback to JS validation, which falls back to PHP validation (you don't have to build the PHP validation)
+- Make sure the form is naturally keyboard accessible
+- Use semantic HTML
